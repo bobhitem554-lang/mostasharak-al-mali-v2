@@ -61,53 +61,6 @@ st.markdown("""
         margin-top: 20px;
         box-shadow: 0 10px 30px rgba(0,0,0,0.5);
     }
-
-    /* تخصيص مكونات الرفع الافتراضية لتبدو كعلامة زائد أنيقة */
-    .stFileUploader section {
-        padding: 0 !important;
-        background: transparent !important;
-        border: none !important;
-    }
-    .stFileUploader button {
-        background: #1e293b !important;
-        color: #f59e0b !important;
-        border: 1px solid rgba(245, 158, 11, 0.4) !important;
-        border-radius: 50% !important;
-        width: 42px !important;
-        height: 42px !important;
-        font-size: 1.4rem !important;
-        padding: 0 !important;
-        display: flex !important;
-        align-items: center !important;
-        justify-content: center !important;
-        transition: all 0.3s ease;
-    }
-    .stFileUploader button:hover {
-        background: #f59e0b !important;
-        color: #0b0d17 !important;
-        box-shadow: 0 0 12px rgba(245, 158, 11, 0.6);
-    }
-
-    /* زر الإرسال الجانبي الصغير السهم */
-    div.stButton > button:first-child {
-        background: #f59e0b !important;
-        color: #0b0d17 !important;
-        border: none !important;
-        border-radius: 50% !important;
-        width: 42px !important;
-        height: 42px !important;
-        font-size: 1.2rem !important;
-        display: flex !important;
-        align-items: center !important;
-        justify-content: center !important;
-        box-shadow: 0 4px 12px rgba(245, 158, 11, 0.3) !important;
-        transition: all 0.3s ease !important;
-    }
-    div.stButton > button:first-child:hover {
-        background: #fbbf24 !important;
-        transform: scale(1.05) !important;
-        box-shadow: 0 0 15px rgba(245, 158, 11, 0.6) !important;
-    }
     </style>
 """, unsafe_allow_html=True)
 
@@ -158,8 +111,8 @@ if API_KEY:
                 except Exception as e:
                     st.error(f"خطأ في قراءة الصورة المرفوعة: {e}")
 
-        # بناء شريط الإدخال السفلي
-        col_file, col_input, col_send = st.columns()
+        # بناء شريط الإدخال السفلي بالصيغة المحدثة التلقائية المتوافقة 100% مع الهواتف والمنصة
+        col_file, col_input, col_send = st.columns([1, 4, 1])
 
         with col_file:
             st.markdown("<p style='font-size:0.75rem; text-align:center; color:#94a3b8; margin:0; padding-top:10px;'>إرفاق (+)</p>", unsafe_allow_html=True)
